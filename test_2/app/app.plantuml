@@ -1,0 +1,193 @@
+@startuml
+
+title __APP's Class Diagram__\n
+
+  namespace com.example.test_2 {
+    class com.example.test_2.BuildConfig {
+    }
+  }
+  
+
+  namespace com.example.test_2 {
+    class com.example.test_2.MainActivity {
+    }
+  }
+  
+
+  namespace com.example.test_2 {
+    class com.example.test_2.MainActivity_ViewBinding {
+    }
+  }
+  
+
+  namespace com.example.test_2 {
+    class com.example.test_2.WelcomeActivity {
+    }
+  }
+  
+
+  namespace com.example.test_2 {
+    namespace ui.dashboard {
+      class com.example.test_2.ui.dashboard.DashboardFragment {
+      }
+    }
+  }
+  
+
+  namespace com.example.test_2 {
+    namespace ui.dashboard {
+      class com.example.test_2.ui.dashboard.DashboardViewModel {
+      }
+    }
+  }
+  
+
+  namespace com.example.test_2 {
+    namespace ui.dashboard {
+      class com.example.test_2.ui.dashboard.MD5Utils {
+      }
+    }
+  }
+  
+
+  namespace com.example.test_2 {
+    namespace ui.dashboard {
+      class com.example.test_2.ui.dashboard.RegisterActivity {
+      }
+    }
+  }
+  
+
+  namespace com.example.test_2 {
+    namespace ui.home {
+      abstract class com.example.test_2.ui.home.BaseRecycleAdapter {
+      }
+    }
+  }
+  
+
+  namespace com.example.test_2 {
+    namespace ui.home {
+      class com.example.test_2.ui.home.HomeFragment {
+      }
+    }
+  }
+  
+
+  namespace com.example.test_2 {
+    namespace ui.home {
+      class com.example.test_2.ui.home.SeachRecordAdapter {
+      }
+    }
+  }
+  
+
+  namespace com.example.test_2 {
+    namespace ui.home {
+      class com.example.test_2.ui.home.SearchDemo {
+      }
+    }
+  }
+  
+
+  namespace com.example.test_2 {
+    namespace ui.home {
+      class com.example.test_2.ui.home.SearchResult {
+      }
+    }
+  }
+  
+
+  namespace com.example.test_2 {
+    namespace ui.home {
+      namespace db {
+        class com.example.test_2.ui.home.db.DbDao {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.example.test_2 {
+    namespace ui.home {
+      namespace db {
+        class com.example.test_2.ui.home.db.RecordSQLiteOpenHelper {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.example.test_2 {
+    namespace ui.home {
+      namespace result {
+        class com.example.test_2.ui.home.result.Data {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.example.test_2 {
+    namespace ui.home {
+      namespace result {
+        class com.example.test_2.ui.home.result.MyAdapter {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.example.test_2 {
+    namespace ui.home {
+      namespace result {
+        class com.example.test_2.ui.home.result.NewContentFragment {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.example.test_2 {
+    namespace ui.home {
+      namespace result {
+        class com.example.test_2.ui.home.result.NewListFragment {
+        }
+      }
+    }
+  }
+  
+
+  com.example.test_2.MainActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.test_2.MainActivity_ViewBinding .up.|> butterknife.Unbinder
+  com.example.test_2.MainActivity_ViewBinding o-- com.example.test_2.MainActivity : target
+  com.example.test_2.WelcomeActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.test_2.ui.dashboard.DashboardFragment -up-|> androidx.fragment.app.Fragment
+  com.example.test_2.ui.dashboard.DashboardFragment o-- com.example.test_2.ui.dashboard.DashboardViewModel : dashboardViewModel
+  com.example.test_2.ui.dashboard.DashboardViewModel -up-|> androidx.lifecycle.ViewModel
+  com.example.test_2.ui.dashboard.RegisterActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.test_2.ui.home.BaseRecycleAdapter -up-|> androidx.recyclerview.widget.RecyclerView.Adapter
+  com.example.test_2.ui.home.BaseRecycleAdapter o-- com.example.test_2.ui.home.BaseRecycleAdapter.RvItemOnclickListener : mRvItemOnclickListener
+  com.example.test_2.ui.home.HomeFragment -up-|> androidx.fragment.app.Fragment
+  com.example.test_2.ui.home.SeachRecordAdapter -up-|> com.example.test_2.ui.home.BaseRecycleAdapter
+  com.example.test_2.ui.home.SearchDemo -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.test_2.ui.home.SearchDemo o-- com.example.test_2.ui.home.SeachRecordAdapter : mAdapter
+  com.example.test_2.ui.home.SearchDemo o-- com.example.test_2.ui.home.db.DbDao : mDbDao
+  com.example.test_2.ui.home.SearchResult -up-|> androidx.fragment.app.FragmentActivity
+  com.example.test_2.ui.home.db.DbDao o-- com.example.test_2.ui.home.db.RecordSQLiteOpenHelper : helper
+  com.example.test_2.ui.home.db.RecordSQLiteOpenHelper -up-|> android.database.sqlite.SQLiteOpenHelper
+  com.example.test_2.ui.home.result.MyAdapter -up-|> android.widget.BaseAdapter
+  com.example.test_2.ui.home.result.NewContentFragment -up-|> androidx.fragment.app.Fragment
+  com.example.test_2.ui.home.result.NewContentFragment o-- com.example.test_2.ui.home.result.NewContentFragment.ViewHolder : viewHolder
+  com.example.test_2.ui.home.result.NewListFragment .up.|> android.widget.AdapterView.OnItemClickListener
+  com.example.test_2.ui.home.result.NewListFragment -up-|> androidx.fragment.app.Fragment
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

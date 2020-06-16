@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/qmui_config_color_white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background2"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+            <EditText
+                android:id="@+id/et_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:paddingLeft="6dp"
+                android:hint="账号"
+                android:textColorHint="@color/qmui_config_color_50_white"
+                android:textColor="#ffffff"
+                android:theme="@style/MyEditText"
+                android:singleLine="true"
+                android:maxLength="15"
+
+                android:textSize="18sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:paddingLeft="6dp"
+                android:singleLine="true"
+                android:hint="请输入密码"
+                android:textColorHint="@color/qmui_config_color_50_white"
+                android:textColor="#ffffff"
+                android:theme="@style/MyEditText"
+                android:inputType="textPassword"
+                android:maxLength="15"
+
+                android:id="@+id/et_psw"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:paddingLeft="6dp"
+                android:singleLine="true"
+                android:hint="请再次输入密码"
+                android:textColorHint="@color/qmui_config_color_50_white"
+                android:textColor="#ffffff"
+                android:theme="@style/MyEditText"
+                android:inputType="textPassword"
+                android:maxLength="15"
+
+                android:id="@+id/et_psw_again"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:paddingLeft="6dp"
+                android:gravity="left"
+                android:text="性别"
+                android:textColor="@color/qmui_config_color_75_white"
+                android:textSize="18sp" />
+            <RadioGroup
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.6"
+                android:id="@+id/SexRadio"
+                android:paddingLeft="5dp">
+                <RadioButton
+                    android:id="@+id/mainRegisterRdBtnFemale"
+                    android:buttonTint="@color/qmui_config_color_75_white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="女生"
+                    android:textColor="@color/qmui_config_color_75_white"/>
+
+                <RadioButton
+                    android:id="@+id/mainRegisterRdBtnMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/qmui_config_color_75_white"
+                    android:text="男生"
+                    android:textColor="@color/qmui_config_color_75_white"/>
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:paddingLeft="6dp"
+                android:hint="学校"
+                android:textColorHint="@color/qmui_config_color_50_white"
+                android:textColor="#ffffff"
+                android:theme="@style/MyEditText"
+                android:singleLine="true"
+                android:maxLength="15"
+
+                android:textSize="18sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+        <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+            android:id="@+id/btn_register"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="40dp"
+            android:text="注册"
+            android:textSize="24sp"
+            android:background="@color/app_color_blue" />
+    </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>
